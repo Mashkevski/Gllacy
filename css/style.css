@@ -602,3 +602,53 @@ img {
 #product-3:checked ~ .slider-controls .slider-controls-item--3 {
   background-color: #fff;
 }
+
+.banners {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  min-height: 229px;
+  padding: 18px 20px 20px 24px;
+  border-radius: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.banner:first-child {
+  background-image: url(../img/raspberry.jpg);
+}
+
+.banner:last-child {
+  background-image: url(../img/chocolate.jpg);
+}
+
+.banner h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banner p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.banner .button {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-right: 22px;
+  padding-left: 22px;
+  
+}
+
