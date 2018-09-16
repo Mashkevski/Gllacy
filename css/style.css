@@ -73,6 +73,7 @@ img {
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   padding-top: 9px;
   line-height: 18px;
   font-weight: 700;
@@ -475,24 +476,129 @@ img {
 .sliders {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
-  min-height: 550px;
-  text-align: center;
+  align-items: center;
+  padding-top: auto;
+  padding-bottom: 60px;
+  width: 700px;
+  min-height: 585px;
 }
 
 .sliders p {
+  display: block;
+  margin-bottom: 25px;
+  width: 700px;
+  font-weight: 700;
   font-size: 60px;
   line-height: 60px;
+  color: #fff;
+}
+
+.sliders .button {
+  width: 280px;
+  padding: 10px 5px;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.slider {
+  display: none;
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    27px 0,
+    top 41px right 27px;
+  }
+
+.slider::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 1200px;
+  height: 881px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: -100;
 }
 
 .slider-1 {
-  height: 100%;
+  background-image:
+    url(../img/ice-cream-1-1.png),
+    url(../img/ice-cream-1-2.png);
+}
+
+.slider-1:before {
+  background-image: url(../img/illumination-1.png);
 }
 
 .slider-2 {
-  display: none;
+  background-image:
+    url(../img/ice-cream-2-1.png),
+    url(../img/ice-cream-2-2.png)
+}
+
+.slider-2:before {
+  background-image: url(../img/illumination-2.png);
 }
 
 .slider-3 {
-  display: none;
+  background-image:
+    url(../img/ice-cream-3-1.png),
+    url(../img/ice-cream-3-2.png)
+}
+
+.slider-3:before {
+  background-image: url(../img/illumination-3.png);
+}
+
+.slider-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  top: 563px;
+  width: 79px;
+  height: 21px;
+}
+
+.slider-controls-item {
+  font-size: 0;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+#product-1:checked ~ .slider-1 {
+  display: flex;
+}
+
+#product-2:checked ~ .slider-2 {
+  display: flex;
+}
+
+#product-3:checked ~ .slider-3 {
+  display: flex;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1,
+#product-2:checked ~ .slider-controls .slider-controls-item--2,
+#product-3:checked ~ .slider-controls .slider-controls-item--3 {
+  background-color: #fff;
 }
