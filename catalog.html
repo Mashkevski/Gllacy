@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Главная</title>
+  <title>Каталог</title>
 </head>
 <body>
   <h1 class="visually-hidden">Mагазин Gllacy Shop</h1>
@@ -128,40 +128,90 @@
   </header>
 
   <main>
-    <section class="sliders container">
-      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-      <div class="slider-controls">
-        <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
-        <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
-        <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
-      </div>
-      <div class="slider slider-1">
-        <p>Крем-брюле и пломбир с малиновым джемом</p>
-        <a class="button" href="#">Давайте оба!</a>
-      </div>                                                                
-      <div class="slider slider-2">
-        <p>Шоколадный пломбир и лимонный сорбет</p>
-        <a class="button" href="#">Давайте оба!</a>
-      </div>                                                                
-      <div class="slider slider-3">
-        <p>Пломбир с помадкой и клубничный щербет</p>
-        <a class="button" href="#">Давайте оба!</a>
-      </div>                                                                
+    <ul class="bread-crumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Сливочное</a></li>
+    </ul>
+
+    <section class="filter">
+      <h2>Фильтр:</h2>
+      <form action="#">
+        <fieldset class="price-range">
+          <legend class="visually-hidden">Стоимость</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="margin-left: 0; width: 60%"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              Цена:
+              <input name="min-price" type="number" value="100" min="0" max="5000">
+              руб. – 
+              <input name="max-price" type="number" value="500" min="0" max="5000">
+              руб.
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="color-range">
+          <legend>Жирность</legend>
+          <ul>
+            <li>
+              <input class="visually-hidden" type="radio" id="radio-1" name="fatness" checked>
+              <label for="radio-1">0%</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" id="radio-2" name="fatness">
+              <label for="radio-2">до 10%</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" id="radio-3" name="fatness">
+              <label for="radio-3">до 30%</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" id="radio-4" name="fatness">
+              <label for="radio-4">выше 30%</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filler">
+          <legend>Наполнители</legend>
+          <ul>
+            <li>
+              <input class="visually-hidden" type="checkbox" id="filler-1" name="chocolate">
+              <label for="filler-1">шоколадные</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" id="filler-2" name="sugar-powder">
+              <label for="filler-2">сахарные присыпки</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" id="filler-3" name="fruit">
+              <label for="filler-3">фрукты</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" id="filler-4" name="syrup">
+              <label for="filler-4">сиропы</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" id="filler-5" name="jam">
+              <label for="filler-5">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">Применить</button>
+      </form>
     </section>
 
-    <section class="banners container">
-      <div class="banner">
-        <h3>Малинка даром!</h3>
-        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <a class="button" href="#">Хочу варенье!</a>
-      </div>
-      <div class="banner">
-        <h3>Шоколадки даром!</h3>
-        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a class="button" href="#">Хочу шоколадки!</a>
-      </div>
+    <section class="sort">
+      <h2>Сортировка:</h2>
+      <select>
+        <option>Пункт 1</option>
+        <option>Пункт 2</option>
+      </select>
     </section>
 
     <section class="ice-cream-hits container">
@@ -210,49 +260,7 @@
       </ul>
     </section>
 
-    <section class="seo container">
-      <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-        <ul class="seo-items">
-          <li><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
-          <li><p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p></li>
-          <li><p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></li>
-          <li><p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p></li>
-        </ul>
-    </section>
-
-    <div class="blog-news-mailing-wrapper container">
-      <section class="blog-news">
-        <h3>Новое в нашем блоге</h3>
-        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-      </section>
-  
-      <section class="mailing">
-        <div class="mailing-content">
-          <h3 class="visually-hidden">Рассылка</h3>
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form>
-            <input type="email" name="email" id="mailing-email" placeholder="Электронная почта">
-            <button class="button" type="submit">Отправить</button>
-          </form>
-        </div>
-      </section>
-    </div>
-
-    <section class="contacts">
-      <div class="map"></div>
-      <div class="address-block">
-        <dl>
-          <dt><p>Адрес главного офиса<br>и офлайн-магазина:</p></dt>
-          <dd><p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p></dd>
-          <dt><p>Для заказов по телефону:</p></dt>
-          <dd>
-            <p><b>8 812 450-25-25</b></p>
-            <p>(с 10 до 20 ежедневно)</p>
-          </dd>
-        </dl>
-        <a class="button" href="#">Форма обратной связи</a>
-      </div>
-    </section>
+    
   </main>
 
   <footer class="container">
@@ -278,17 +286,5 @@
     </div>
   </footer>
 
-  <div class="modal feedback">
-    <h3>Мы обязательно вам ответим!</h3>
-    <form action="#">
-      <input type="text" name="name" id="name" placeholder="Как вас зовут?">
-      <input type="email" name="email" id="modal-email" placeholder="Ваша почта для ответа?">
-      <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-      <button class="button" type="submit">Отправить</button>
-    </form>
-    <div class="close" tabindex="0"></div>
-  </div>
-
-  <div class="modal-overlay"></div>
 </body>
 </html>
